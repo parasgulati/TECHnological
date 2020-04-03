@@ -1,0 +1,33 @@
+<html>
+<head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<style>
+.contact
+{
+	display:block;
+	width:35%;
+	height:13%;
+	padding:20px;
+	margin-left:40px;
+	margin-top:30px;
+	
+}
+</style>
+</head>
+<body>
+	  <div class="card bg-light text-dark contact">
+    <div class="card-body">
+
+   <table>
+   <form action="contact.php" method="post">
+	<tr><td colspan="2"><input type="text" name="name" placeholder="Name"></td></tr>
+	<tr><td><input type="text" name="email" placeholder="E-Mail"></td><td><input type="text" name="subject" placeholder="Subject"></td></tr>
+	<tr><td colspan="2"><textarea name="message" rows="20" cols="50" placeholder="Message"></textarea></td></tr>
+	<tr><td colspan="2"><input type="submit" value="Send"></td></tr>
+  </form>
+  </table>
+  </div>
+  </div>
+</body>
+</html>

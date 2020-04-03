@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link href="css\sign_up.css" rel="stylesheet" type="text/css">
+<title>
+sign up form
+</title>
+</head>
+<body id="body_tag">
+
+
+	  <div class="card bg-light text-dark signup">
+    <div class="card-body">
+			<table>
+			<form method="post" action="php\sign_up.php">
+			<tr><td>Firstname:</td><td><input type="text" name="firstname" size="50"></td></tr>
+			<tr><td>Lastname:</td><td><input type="text" name="lastname" size="50"></td></tr>
+			<tr><td>choose Password:</td><td><input type="password" name="passkey" size="50"></td>
+			<tr><td>email-id:</td><td><input type="text" name="email" size="50"></td>
+			<tr><td>Gender:</td></tr>
+			<tr><td>Male:</td><td><input type="radio" name="gender" value="male"></td></tr>
+			<tr><td>Female:</td><td><input type="radio" name="gender" value="female"></td></tr>
+			<tr><td>Age:</td><td><input type="text" name="age"></td></tr>
+			<tr><td><input type="submit" value="create"></td>
+				<td><input type="reset"></td></tr>
+			</form>
+			</table>
+	</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+	<body>
+		<form action="php\manager.php" method="post">
+			Heading:<input type="text" name="heading"><br><br>
+			By:<input type="text" name="by"><br><br>
+			Subject:<input type="text" name="subject"><br><br>
+			Content:<textarea rows="20" cols="30" name="content"></textarea>
+			<input type="submit" value="publish">		
+		</form>
+		<?php 
+		$conn=mysqli_connect('localhost','root','','technological');
+		if(mysqli_connect_errno())
+		{
+			echo"sorry can't connect database";
+		}
+		else
+		{
+			$query="select * from tech_updates";
+			$results=$conn->query($query);
+			$num_results=$results->num_rows;
+			for($i=0;$i<$num_results;$i++)
+			{
+				$row=$results->fetch_assoc();
+				echo$i.'<br>'.$row['heading'].'<br>'.$row['by'].'<br>'.$row['subject'].'<br>'.$row['content'].'<br>------------<br>';
+			}
+		}
+		?>
+		<form action="php\tech_updates_delete.php">
+		<input type="text" name="head">
+		<input type="submit" value="Delete">
+		</form>
+	<body>
+</html>
